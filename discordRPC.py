@@ -1,52 +1,63 @@
+from time import sleep, time
 from pypresence import Presence
 from pypresence.types import ActivityType, StatusDisplayType
-import time
-
-RPC = Presence("1437232956065190095")
-RPC.connect()
-
-start = int(time.time())
-end = int(time.time()+600)
+from threading import Thread
 
 class DiscordRPC:
-    def __init__(self, client_id):
-        self.id = client_id
-        self.state = False
-        self.start = None
-        self.end = None
-        self.music_name = None
-        self.artist = None
+    def __init__(self, client_id: str):
+        self.rpc = Presence(client_id)
         self.default_image = "icon.png"
-        self.image_url = None or self.default_image
+        self.state = False
+        self.music_info = {
+            "start": int(),
+            "end": int(),
+            "music_name": str(),
+            "artist": str(),
+            "image_url": str() or self.default_image,
+            "current_time": int()
+        }
+        self.thread = None
 
-    def update_state(self, music_name, artist, image_url, music_time):
-        self.state = True
-        self.start = int(time.time())
-        self.end = start + music_time
-        self.music_name = music_name
-        self.artist = artist
-        self.image_url = image_url or self.default_image
+    def update_state(self, music_name: str, artist: str, image_url: str, music_time: int, current_time: int):
+        if self.music_info["music_name"] == music_name and self.music_info["artist"] == artist and self.state == True:
+            return
 
-    def initialize(self, name="Youtube Music", status_display=StatusDisplayType.STATE, activity_type=ActivityType.LISTENING):
+        self.music_info["start"] = int(time())
+        self.music_info["end"] = self.music_info["start"] + music_time
+        self.music_info["music_name"] = music_name
+        self.music_info["artist"] = artist
+        self.music_info["image_url"] = image_url or self.default_image
+        self.music_info["current_time"] = current_time
+
+        if not self.state:
+            self.state = True
+            self.music_info["start"] = int(time()) - self.music_info["current_time"]
+            self.music_info["end"] = self.music_info["start"] + music_time
+            self.update_call()
+
+    def update_call(self, name="Youtube Music", status_display=StatusDisplayType.STATE, activity_type=ActivityType.LISTENING):
         while self.state:
             try:
-                RPC.update(
+                self.rpc.update(
                     name=name,
                     status_display_type=status_display,
-                    state=self.artist,
-                    details=self.music_name,
-                    large_image=self.image_url,
+                    state=self.music_info["artist"],
+                    details=self.music_info["music_name"],
+                    large_image=self.music_info["image_url"],
                     activity_type=activity_type,
-                    start=self.start,
-                    end=self.end
+                    start=self.music_info["start"],
+                    end=self.music_info["end"]
                 )
             except Exception as e:
                 print(f"Error updating RPC: {e}")
 
-            time.sleep(1)
+            sleep(1)
+
+
+    def connect(self):
+        self.rpc.connect()
 
     def stop(self):
-        self.state = False
-
-
-
+        if self.state:
+            self.state = False
+            self.rpc.clear()
