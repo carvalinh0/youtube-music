@@ -85,8 +85,13 @@ This project is fully functional, but there are always opportunities for enhance
 - **Better Error Handling:** Implement more robust error handling for cases where the Discord client is not running or the connection is lost, with options to reconnect automatically.
 - **Configuration File:** Add a simple script in the site to allow users to set preferences, such as whether the app should start minimized or if the debug console should be enabled.
 - **Optimizations:** The actual code has some known issues that could be optimized for better performance and user experience.
-- **Listen my actual music support:** Add a button to listen the song that other users are listening to.
+- **Listen to my actual music support:** Add a button to listen to the song that other users are listening to.
 - **Listen with me support:** Add support to listen the same songs as your friend (hard one).
+
+---
+
+## Known Issues
+You can see the issues that were detected/reported on [Repository Issues Page](https://github.com/carvalinh0/Youtube-Music-RPC/issues).
 
 ---
 
