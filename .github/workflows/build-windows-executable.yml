@@ -28,7 +28,7 @@ jobs:
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller --hide-console --onefile --windowed --icon=icon.ico --add-data "script.js;." --add-data "window.py;." --add-data "discordRPC.py;." --add-data "icon.png;." --add-data "icon.ico;." main.py -n "Youtube Music"
+        pyinstaller --noconsole --onefile --windowed --icon=icon.ico --add-data "script.js;." --add-data "window.py;." --add-data "discordRPC.py;." --add-data "icon.png;." --add-data "icon.ico;." main.py -n "Youtube Music"
 
     - name: Upload artifact
       uses: actions/upload-artifact@v5
