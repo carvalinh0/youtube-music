@@ -82,7 +82,7 @@ pub fn run() {
             #[cfg(not(debug_assertions))]
             let script = include_str!("script.js");
 
-            window.eval(&script).unwrap();
+            window.eval(&*script).unwrap();
             Ok(())
         })
         .run(tauri::generate_context!())
