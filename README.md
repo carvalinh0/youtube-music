@@ -1,31 +1,26 @@
 <div align="center" style="padding: 20px">
-    <img src="https://play-lh.googleusercontent.com/0oO5sAneb9lJP6l8c6DH4aj6f85qNpplQVHmPmbbBxAukDnlO7DarDW0b-kEIHa8SQ" alt="Discord logo" width="128" style="border-radius: 100%">
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Youtube_Music_icon.svg/2048px-Youtube_Music_icon.svg.png" alt="Youtube Music logo" width="128" style="border-radius: 100%">
 </div>
 
-# YouTube Music - Discord Rich Presence
+# YouTube Music Client
 
-A simple, lightweight desktop application that displays your currently playing song on YouTube Music as your Discord Rich Presence status.
+A simple, lightweight desktop application of YouTube Music with Discord Rich Presence integration.
 
 ## ✨ Features
-
+- **Super lightweight app**: Tauri provides a really lightweight application that runs as a standalone application with a minimal footprint, wrapping the official YouTube Music website.
 - **Real-time Status:** Automatically updates your Discord status when a new song starts.
-- **Detailed Information:** Shows the song title, artist, and album cover.
-- **Time Tracking:** Displays the elapsed time and remaining time for the current track.
-- **Lightweight:** Runs as a standalone application with a minimal footprint, wrapping the official YouTube Music website.
-- **Easy to Use:** Run the executable, log in to YouTube Music, and play your music!
 
 ---
 
 ## 🚀 Installation & Usage
 
-1. **Set up the Discord app to your account:** First, you should [**click here**](https://discord.com/oauth2/authorize?client_id=1437232956065190095&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.com%2Foauth2%2Fauthorize%3Fclient_id%3D1437232956065190095&scope=rpc) and add the Discord app to your account.
+1. **Set up the Discord app to your account (if you want the Discord RPC, otherwise you can skip this step):** First, you should [**click here**](https://discord.com/oauth2/authorize?client_id=1437232956065190095&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.com%2Foauth2%2Fauthorize%3Fclient_id%3D1437232956065190095&scope=rpc) and add the Discord app to your account.
 2. **Download:** Go to the [**Releases Page**](https://github.com/carvalinh0/youtube-music/releases) on the right side of the repository page.
-3. **Get the app and install:** Download the file that corresponds to your OS from the latest release and install.<br/>
+3. **Get the app and install:** Download the file that corresponds to your OS from the latest release and install.
    - Windows: Use the .msi file to install the app.
    - Linux: Download the .rpm or .deb file and install it using your package manager.
    - MacOS: Download the .dmg file and drag it to the Applications folder.
-4. **Log In:** A window with the YouTube Music website will open. Log in with your Google account.
+4. **Log In:** A window with the YouTube Music website will open. You can log in with your Google account.
 5. **Play Music:** Start playing any song. Your Discord status will automatically update to show what you're listening to.
 
 ---
@@ -70,6 +65,7 @@ This project is fully functional, but there are always opportunities for enhance
 
 - **System Tray Icon:** Instead of just closing, the application could be minimized to the system tray for a more seamless background experience. This would allow users to easily show/hide the window.
 - **Configuration:** Add a simple script in the site to allow users to set preferences, such as whether the app should start minimized or if the debug console should be enabled.
+
 ---
 
 ## Known Issues
