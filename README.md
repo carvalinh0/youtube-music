@@ -2,6 +2,9 @@
     <img src="https://music.youtube.com/img/on_platform_logo_dark.svg" alt="Youtube Music logo" width="128" style="border-radius: 100%">
 </div>
 
+> [!WARNING]
+> Este repositório foi arquivado e não receberá mais atualizações. Recomenda-se o uso do [Limusic](https://github.com/rocktimsaikia/limusic).
+
 # YouTube Music Client (Unofficial)
 
 A simple, lightweight desktop application of YouTube Music with Discord Rich Presence integration.
@@ -10,7 +13,7 @@ A simple, lightweight desktop application of YouTube Music with Discord Rich Pre
 
 - **Super lightweight app**: Tauri provides a really lightweight application that runs as a standalone application with a minimal footprint, wrapping the official YouTube Music website.
 - **Real-time Status:** Automatically updates your Discord status when a new song starts.
-- **Overlay for your preferred stream application:** You can customize and set up your own music overlay for your livestream; check [WIDGET_STYLES](https://github.com/carvalinh0/youtube-music/blob/main/WIDGET_STYLES.md) to see some examples.
+- **Overlay for your preferred stream application:** You can customize and set up your own music overlay for your livestream; check [WIDGET_STYLES](https://github.com/carvalinh0/youtube-music/blob/main/docs/WIDGET_STYLES.md) for examples.
 
 ---
 
