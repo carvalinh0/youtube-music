@@ -3,7 +3,7 @@
 </div>
 
 > [!WARNING]
-> Este repositório foi arquivado e não receberá mais atualizações. Recomenda-se o uso do [Limusic](https://github.com/rocktimsaikia/limusic).
+> This repository was archived, and it's not getting more updates; we recommend using [Limusic](https://github.com/rocktimsaikia/limusic) instead.
 
 # YouTube Music Client (Unofficial)
 
